@@ -113,6 +113,16 @@
     .hs-mascot video{border-radius:16px;object-fit:cover}
     @media(max-width:768px){.hs-row{flex-direction:column-reverse;gap:30px;text-align:center}.hs-text{text-align:center}.hs-text .hs-word,.hs-text .hs-desc{text-align:center}.hs-text .hs-ico{margin:0 auto 28px}.hs-mascot{flex:0 0 200px}.hs-mascot video,.hs-mascot img{max-width:200px}}
 
+    /* Hero background car */
+    .hero-car-bg{position:absolute;bottom:0;left:50%;transform:translateX(-50%) translateY(110%);width:clamp(500px,60vw,900px);opacity:0;z-index:1;pointer-events:none;filter:brightness(.5) saturate(.7);transition:none}
+    @keyframes carDropIn{
+      0%{opacity:0;transform:translateX(-50%) translateY(-60vh) rotate(-4deg) scale(.85)}
+      60%{opacity:.25;transform:translateX(-50%) translateY(8%) rotate(1deg) scale(1.02)}
+      80%{transform:translateX(-50%) translateY(-2%) rotate(-.5deg) scale(.99)}
+      100%{opacity:.25;transform:translateX(-50%) translateY(0) rotate(0) scale(1)}
+    }
+    .hero-car-bg.drop{animation:carDropIn .9s cubic-bezier(.22,.68,.36,1) forwards}
+
     /* Scroll indicator */
     .hscr{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.18);font-size:8px;letter-spacing:3px;text-transform:uppercase;animation:float 3s ease-in-out infinite;cursor:pointer;z-index:10}
     .hsl{width:1px;height:32px;background:linear-gradient(to bottom,var(--g500),transparent)}
@@ -363,7 +373,7 @@
       <img src="../assets/newlogo.PNG" alt="Bidu Automóveis">
     </div>
     <p class="vn-tag">Seu próximo carro está aqui.</p>
-    <p class="vn-sub">Cuiabá, MT &middot; Desde 2014</p>
+    <p class="vn-sub">Cuiabá, MT &middot; Desde 2022</p>
   </div>
   <div class="vn-bar-wrap"><div class="vn-bar"></div></div>
   <span class="vn-skip" id="vn-skip">Pular &rarr;</span>
@@ -391,11 +401,12 @@
 <div class="hero-wrap" id="inicio">
 <section class="hero" id="hero-sticky">
   <div class="hero-bg" aria-hidden="true"></div>
+  <img src="../assets/corollacross.png" alt="" class="hero-car-bg" id="hero-car-bg" aria-hidden="true">
   <div class="hero-progress" id="hero-progress"></div>
 
   <!-- SLIDE 0 — Abertura -->
   <div class="hs hs-0 active" data-slide="0">
-    <div class="hs0-tag">Cuiabá · Mato Grosso · Desde 2014</div>
+    <div class="hs0-tag">Cuiabá · Mato Grosso · Desde 2022</div>
     <h1 class="hs0-h">Seu próximo carro<br>começa <em>aqui.</em></h1>
     <p class="hs0-sub">Confiança que move você.</p>
     <div class="hs0-cta">
@@ -454,7 +465,7 @@
   <!-- SLIDE 4 — CTA Final -->
   <div class="hs hs-4" data-slide="4">
     <h2 class="hs4-h">Pronto pra encontrar<br>seu <em>carro ideal?</em></h2>
-    <p class="hs4-sub">Mais de 500 veículos vendidos com a confiança de quem cuida de cada detalhe há mais de 10 anos.</p>
+    <p class="hs4-sub">Mais de 500 veículos vendidos com a confiança de quem cuida de cada detalhe há 4 anos.</p>
     <div class="hs4-acts">
       <a href="https://www.usadofacil.com.br/Biduautomoveis" target="_blank" rel="noopener" class="btn bg">Explorar Estoque</a>
       <a href="https://wa.me/5565999031955" target="_blank" rel="noopener" class="btn bo">WhatsApp</a>
@@ -481,7 +492,7 @@
 <section class="stats" id="stats">
   <div class="sg">
     <div class="si rv"><div class="sn" data-target="500" data-suffix="+">0+</div><div class="sl">Veículos Vendidos</div></div>
-    <div class="si rv r1"><div class="sn" data-target="10" data-suffix="">0</div><div class="sl">Anos de Experiência</div></div>
+    <div class="si rv r1"><div class="sn" data-target="4" data-suffix="">0</div><div class="sl">Anos de Experiência</div></div>
     <div class="si rv r2"><div class="sn" data-target="98" data-suffix="%">0%</div><div class="sl">Clientes Satisfeitos</div></div>
     <div class="si rv r3"><div class="sn" data-target="4.9" data-suffix="★">0★</div><div class="sl">Avaliação Google</div></div>
   </div>
@@ -492,17 +503,17 @@
   <div class="ai">
     <div class="ab">
       <div class="slbl rv">Nossa História</div>
-      <h2 class="at rv">Mais de uma década<br>conectando pessoas<br>aos seus <em>carros ideais.</em></h2>
+      <h2 class="at rv">4 anos<br>conectando pessoas<br>aos seus <em>carros ideais.</em></h2>
       <div class="gbar rv"></div>
-      <p class="rv">Desde 2014, a Bidu Automóveis transforma a experiência de compra de veículos seminovos em Cuiabá. Nascida da paixão por automóveis e do compromisso real com a qualidade, conquistamos a confiança de centenas de clientes que buscam excelência e transparência.</p>
+      <p class="rv">Desde 2022, a Bidu Automóveis transforma a experiência de compra de veículos seminovos em Cuiabá. Nascida da paixão por automóveis e do compromisso real com a qualidade, conquistamos a confiança de centenas de clientes que buscam excelência e transparência.</p>
       <p class="rv r1">Cada veículo em nosso estoque passa por rigorosa inspeção mecânica e documental. Trabalhamos com as melhores instituições financeiras para garantir condições de financiamento acessíveis e adaptadas à sua realidade.</p>
-      <div class="aq rv r2"><p>"Na Bidu, cada carro carrega a história de confiabilidade que construímos há mais de dez anos. Sua satisfação é nosso maior legado."</p></div>
+      <div class="aq rv r2"><p>"Na Bidu, cada carro carrega a história de confiabilidade que construímos ao longo desses 4 anos. Sua satisfação é nosso maior legado."</p></div>
     </div>
     <div class="av rv r1">
       <div class="aiw">
         <video src="../assets/Veo_3_1 - crie uma vinheta no estilo de gif animado simples mas moderno para ficar em loop do site d.mp4" autoplay loop muted playsinline loading="lazy"></video>
       </div>
-      <div class="asp"><strong>2014</strong><span>Fundação</span></div>
+      <div class="asp"><strong>2022</strong><span>Fundação</span></div>
     </div>
   </div>
 </section>
@@ -749,8 +760,18 @@
     const bar  = document.getElementById('hero-progress');
     const dots = document.querySelectorAll('.hero-dot');
     const slides = document.querySelectorAll('.hs');
+    const carBg = document.getElementById('hero-car-bg');
     const total = slides.length;
     let cur = 0;
+
+    function dropCar(){
+      carBg.classList.remove('drop');
+      void carBg.offsetWidth; /* force reflow */
+      carBg.classList.add('drop');
+    }
+
+    /* Initial drop on load */
+    dropCar();
 
     function update(){
       const rect = wrap.getBoundingClientRect();
@@ -769,6 +790,7 @@
         dots[cur].classList.remove('active');
         dots[idx].classList.add('active');
         cur = idx;
+        dropCar();
       }
     }
 
